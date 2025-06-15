@@ -22,7 +22,7 @@ class Assignatura(models.Model):
     grup = models.ForeignKey(Grup, on_delete=models.CASCADE, related_name='assignatures',null=True)
     
     def __str__(self):
-        return f"{self.nom_curt} - {self.nom} ({self.grau}, {self.curs})"
+        return f"{self.nom_curt} - {self.nom} ({self.grup.nivell}, {self.grup.grau})"
 
 class Alumne(models.Model):
     nom = models.CharField(max_length=100)
