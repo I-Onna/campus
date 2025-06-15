@@ -1,0 +1,11 @@
+<h1>Avaluació</h1>
+<h2>Curs 2024-2025</h2>
+<table>
+{% for grup in grups %}
+	<tr>
+        <ul>{{grup.nivell}} de {{grup.grau}}: </ul>
+            <li><a href="/grup/{{grup.id}}/assignatures/">Per assignatures</a></li>
+            <li><a href="/grup/{{grup.id}}/alumnes/">Per alumne ("Under construction")</a></li>
+    </tr>
+{% endfor %}
+</table>

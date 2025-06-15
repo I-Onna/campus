@@ -31,7 +31,7 @@ class Alumne(models.Model):
     assignatures = models.ManyToManyField(Assignatura, through='Matricula', related_name='alumnes_assignatura')
 
     def __str__(self):
-        return f"{self.nom} {self.cognoms} - {self.grup}"
+        return f"{self.nom} {self.cognoms}"
 
 class Matricula(models.Model):
     alumne = models.ForeignKey(Alumne, on_delete=models.CASCADE)

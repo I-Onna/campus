@@ -1,0 +1,9 @@
+<h1>{{grup}}:</h1>
+<h2>Curs 2024-2025</h2>
+<table>
+{% for assignatura in assignatures %}
+	<tr>
+        <li><a href="/grup/{{grup_id}}/assignatura/{{assignatura.id}}/alumnes/">{{assignatura.nom_curt}} - {{assignatura.nom}}</a></li>
+    </tr>
+{% endfor %}
+</table>

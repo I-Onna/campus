@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from notes import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.avaluacio),
+    path('grup/<int:grup_id>/assignatures/',views.assignatures_grup),
+    path('grup/<int:grup_id>/assignatura/<int:assignatura_id>/alumnes/',views.grup_notes_assignatura),
+    #path('classificacio/<int:lliga_id>/', views.classificacio),
 ]

@@ -1,0 +1,14 @@
+<h1>{{ assignatura }}:</h1>
+<h2>Curs 2024-2025</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Alumne</th>
+        <th>Nota</th>
+    </tr>
+    {% for nota in notes %}
+    <tr>
+        <td>{{ nota.matricula.alumne.nom }} {{ nota.matricula.alumne.cognoms }}</td>
+        <td><b>{{ nota.nota }}</b></td>
+    </tr>
+    {% endfor %}
+</table>
